@@ -14,6 +14,7 @@ namespace v0617
     {
         int vx = -10;
         int vy = -10;
+        
         public Form1()
         {
             InitializeComponent();
@@ -39,11 +40,22 @@ namespace v0617
             {
                 vy = -Math.Abs(vy);
             }
+            
+            
         }
+        
+
 
         private void label1_Click(object sender, EventArgs e)
         {
             timer1.Enabled = false;
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Point spos = MousePosition;
+            Point fpos = PointToClient(spos);
+            label3.Left = spos.X;
+            label3.Top = spos.Y;
+        }
     }
-}
