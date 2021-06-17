@@ -27,7 +27,7 @@ namespace v0617
             {
                 vx = Math.Abs(vx);
             }
-            if (label1.Left + label1.Width > ClientSize.Width)
+            if (label1.Right > ClientSize.Width)
             {
                 vx = -Math.Abs(vx);
             }
@@ -43,10 +43,7 @@ namespace v0617
 
         private void label1_Click(object sender, EventArgs e)
         {
-            if(timer1.Enabled==true)
-            {
-                timer1.Enabled = false;
-            }
+            timer1.Enabled = false;
         }
     }
 }
